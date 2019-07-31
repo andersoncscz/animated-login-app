@@ -23,7 +23,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
 
     _animationController.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
-        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomeScreen()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
       }
     });
 

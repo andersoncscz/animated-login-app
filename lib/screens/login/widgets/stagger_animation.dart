@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:login_app/screens/home/home_screen.dart';
 
 class StaggerAnimation extends StatelessWidget {
 
@@ -14,7 +13,7 @@ class StaggerAnimation extends StatelessWidget {
       ).animate(
         CurvedAnimation(
           parent: controller,
-          curve: Interval(0.0, 0.150)
+          curve: Interval(0.0, 0.3, curve: Curves.bounceOut)
         )
       ), buttonZoomOut = Tween(
         begin: 60.0,
@@ -61,7 +60,7 @@ class StaggerAnimation extends StatelessWidget {
   }
 
   Widget _buildInside(BuildContext context) {
-    if (buttonSqueeze.value > 75) {
+    if (buttonSqueeze.value > 130) {
       return Text(
         'Sign In',
         style: TextStyle(
